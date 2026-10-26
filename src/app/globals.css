@@ -1099,6 +1099,12 @@ section[id] { scroll-margin-top: 5rem; }
   .about-section .portrait-image, .about-section .portrait-signature { opacity: 1; transform: none; transition: none; }
 }
 
+/* Keep the full handwritten name inside the portrait frame. */
+.portrait-signature { right: 5%; width: clamp(9rem, 15vw, 12rem); }
+@media (max-width: 42rem) {
+  .portrait-signature { right: 3%; width: clamp(8rem, 40vw, 10rem); }
+}
+
 /* Experience systems visualization */
 .experience-layout { grid-template-columns:minmax(17rem,.82fr) minmax(0,1.18fr);align-items:center;gap:clamp(2rem,4.5vw,4.75rem); }
 .experience-layout > .experience-side,.experience-layout > .section-main { grid-column:auto; }
