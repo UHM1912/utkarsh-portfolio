@@ -18,6 +18,7 @@ export function Hero() {
             {siteLinks.resume && <a href={siteLinks.resume} target="_blank" rel="noreferrer" className="hero-secondary">Resume <ArrowIcon diagonal /></a>}
           </div>
           <div className="hero-footnote"><span>STATISTICS</span><i /> <span>EXPERIMENTATION</span><i /> <span>ENGINEERING</span></div>
+          <p className="hero-mantra-mobile">Trying to reach <em>infinity</em></p>
         </div>
         <div className="hero-visual"><InfinityField /><p className="hero-mantra">Trying to reach <em>infinity</em></p></div>
         <span className="hero-side-note" aria-hidden="true">INTELLIGENCE, ENGINEERED.</span>
