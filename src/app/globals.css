@@ -1105,6 +1105,24 @@ section[id] { scroll-margin-top: 5rem; }
   .portrait-signature { right: 3%; width: clamp(8rem, 40vw, 10rem); }
 }
 
+/* Phone layout corrections from real-device screenshots. */
+@media (max-width: 42rem) {
+  .hero-stage { position: relative; }
+  .hero-visual { inset: 0; top: 0; right: 0; width: auto; height: auto; aspect-ratio: auto; opacity: .3; }
+  .hero-mantra { left: var(--gutter); right: var(--gutter); bottom: 2%; width: auto; max-width: none; transform: none; text-align: center; white-space: normal; font-size: clamp(.9rem, 4.2vw, 1.05rem); line-height: 1.4; }
+  .hero-mantra::before, .hero-mantra::after { width: .65rem; margin-inline: .25rem; }
+  .hero-copy { position: relative; z-index: 2; }
+  .about-section > .section-grid { padding-bottom: 2.25rem; }
+  .about-scroll { position: relative; inset: auto; width: fit-content; margin-top: 1.5rem; }
+  .project-media a { aspect-ratio: 1.55; }
+  .project-screenshot { object-fit: contain; object-position: center; background: #eef4f2; }
+}
+@media (max-width: 23rem) {
+  .hero-actions { align-items: stretch; }
+  .hero-primary, .hero-secondary { justify-content: center; font-size: .78rem; }
+  .project-media a { aspect-ratio: 1.35; }
+}
+
 /* Experience systems visualization */
 .experience-layout { grid-template-columns:minmax(17rem,.82fr) minmax(0,1.18fr);align-items:center;gap:clamp(2rem,4.5vw,4.75rem); }
 .experience-layout > .experience-side,.experience-layout > .section-main { grid-column:auto; }
