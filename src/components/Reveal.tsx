@@ -14,7 +14,6 @@ export function Reveal({ children, className, ...props }: RevealProps) {
 
     element.dataset.revealState = "pending";
     const reveal = () => { element.dataset.revealState = "visible"; };
-    const fallback = window.setTimeout(reveal, 900);
     const observer = new IntersectionObserver(([entry]) => {
       if (entry.isIntersecting) {
         reveal();
@@ -23,7 +22,7 @@ export function Reveal({ children, className, ...props }: RevealProps) {
     }, { threshold: 0.08 });
 
     observer.observe(element);
-    return () => { window.clearTimeout(fallback); observer.disconnect(); };
+    return () => { observer.disconnect(); };
   }, []);
 
   return <div ref={elementRef} className={`reveal ${className ?? ""}`} {...props}>{children}</div>;
